@@ -363,6 +363,12 @@ nav ul li a:hover::after {
     
 }
 
+.contact-social p a{
+    text-decoration: none;
+    color: white;
+    
+}
+
 .social-icon{
     margin-top: 30px;
 }
