@@ -308,6 +308,14 @@ nav ul li a:hover::after {
 
 }
 
+.work:hover img{
+    transform: scaleY(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
 .layer h3{
     font-weight: 500;
     margin : 20px;
@@ -326,13 +334,6 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
-.work:hover img{
-    transform: scaleY(1.1);
-}
-
-.work:hover .layer{
-    height: 100%;
-}
 
 .btn{
     display: block;
@@ -403,10 +404,26 @@ nav ul li a:hover::after {
     border-radius: 5px;
     padding: 14px 50px;
     text-decoration: none;
-    color: rgb(243, 5, 5);
-    
-    
+    color: rgb(243, 5, 5);   
 }
+
+.btncv{
+    display: block;
+    margin: 50px auto;
+    margin-left: 5px;
+    width: fit-content;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 14px 50px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+
+.btncv:hover{
+    background-color: blue;
+}
+
 
 .contact-forum{
     width: 100%;
@@ -459,8 +476,8 @@ nav .fas{
         background-image: url(MyWebImage2.png);
     }
     .header-text{
-        margin-top: 40%;
-        font-size: 16px;
+        margin-top: 20%;
+        font-size: 15px;
 
     }
     .header-text h1{
