@@ -1,310 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ravidu Lakshanga Jayasundara</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/350de2e2b1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="Header.png" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravidu Lakshanga Jayasundara </title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/350de2e2b1.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="Header.png">
-</head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <a href="https://jmrl.free.nf"
+            ><img src="MyLogo.png" class="logo"
+          /></a>
+          <ul id="sidemenu">
+            <li><a href="#header#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#portfolio">Portforlio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-circle-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Software Engineer</p>
+          <h1>I'm <span>Ravidu</span> Lakshanga<br />From Srilanka</h1>
+        </div>
+      </div>
+    </div>
 
-<body>
-   
+    <!--------About------------>
 
-            <div id="header">
-                <div class="container">
-                    <nav>
-                        <a href="https://jmrl.free.nf"><img src="MyLogo.png" class="logo"></a>
-                        <ul id="sidemenu">
-                            <li><a href="#header#header">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#services">Service</a></li>
-                            <li><a href="#portfolio">Portforlio</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <i class="fas fa-circle-xmark" onclick="closemenu()"></i>
-                        </ul>
-                        <i class="fas fa-bars" onclick="openmenu()"></i>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="Image2.png" alt="" />
+          </div>
 
-                    </nav>
-                    <div class="header-text">
-                        <p>Software Developer - UI/UX Designer</p>
-                        <h1>I'm <span>Ravidu</span> Lakshanga<br>From Srilanka</h1>
-                    </div>
-                </div>
+          <div class="about-col-2">
+            <h1 class="sub-about">About Me</h1>
+            <p>
+              " I am an undergraduate student at the University of Colombo,
+              School of Computing (UCSC) with a passion for web and software
+              development. I am skilled in HTML, CSS, JavaScript, Java,<b
+                >MERN Stack</b
+              >
+              and , have years of experience in web development and months in
+              software development. "
+            </p>
+
+            <div class="tab-title">
+              <p class="tab-content acctive-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-content" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-content" onclick="opentab('education')">
+                Education
+              </p>
             </div>
 
-            <!--------About------------>
-
-            <div id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="about-col-1">
-                            <img src="Image2.png" alt="">
-                        </div>
-
-                        <div class="about-col-2">
-                            <h1 class="sub-about">About Me</h1>
-                            <p>" I am an undergraduate student at the University of Colombo, School of Computing (UCSC)
-                                with a passion for web and software development.
-                                I am skilled in HTML, CSS, JavaScript, Java, React.js, and Node.js,
-                                and have years of experience in web development and months in software development. "
-                            </p>
-
-                            <div class="tab-title">
-                                <p class="tab-content acctive-link" onclick="opentab('skills')">Skills</p>
-                                <p class="tab-content" onclick="opentab('experience')">Experience</p>
-                                <p class="tab-content" onclick="opentab('education')">Education</p>
-
-                            </div>
-
-                            <div class="tab-item active-tab" id="skills">
-                                <ul>
-                                    <li><span>Web Designing (UI / UX)</span><br>With Word and Fully Customized</li>
-                                    <li><span>Software Development</span><br>With Java ,Python and C++</li>
-                                    <li><span>Mobile APP Development</span><br>With Flutter</li>
-                                </ul>
-                            </div>
-
-                            <div class="tab-item" id="experience">
-                                <ul>
-                                    <li><span>PDF-Sri Lanka (NGO)</span><br>Computer System Operator (One year +)</li>
-                                    <li><span>DigitzPro</span><br>Website Designer and Developer (One year +)</li>
-                                    <li><span>NawaCreation</span><br>Software Developer (One year +)</li>
-                                </ul>
-                            </div>
-
-                            <div class="tab-item" id="education">
-                                <ul>
-                                    <li><span>University Of Colombo School Of Computing</span><br>Bachelor of
-                                        Information Technology (BIT)</li>
-                                    <li><span>University Of Moratuwa</span><br>Diploma in Full-stack Developement</li>
-                                    <li><span>CISCO Network Academy</span><br>Certificate in Cyber Security</li>
-                                    <li><span>Google</span><br>Certificate in Cyber Security</li>
-                                    <li><span>IS2</span><br>Certificate in Cyber Security</li>
-
-
-                                </ul>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
+            <div class="tab-item active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Web Development</span><br />JavaScript , Bootstrap , MERN and MEAN Stack
+                </li>
+                <li>
+                  <span>Java Development</span><br />With Netbean IDE,SpringBoot
+                </li>
+                <li><span>Mobile APP Development</span><br />With Flutter</li>
+              </ul>
             </div>
 
-
-            <!---------------Servieces---------------->
-            <div id="services">
-                <div class="container">
-                    <h1 class="sub-servicec">My services</h1>
-
-                    <div class="sevicec-list">
-
-                        <div>
-                            <i class="fa-solid fa-code"></i>
-                            <h2>Web Development </h2>
-                            <p>Former Web Developer in "Digitzpro" Team.and Full familiar with HTML5,CSS3, Java Script
-                                and Mongodb. </p>
-                            <a href="#">Learn more</a>
-                        </div>
-
-                        <div>
-                            <i class="fa-solid fa-crop"></i>
-                            <h2>UI-UX Designer </h2>
-                            <p>Former Web Developer in "Digitzpro" Team.and Full familiar with HTML5,CSS3 and Java
-                                Script.</p>
-                            <a href="#">Learn more</a>
-                        </div>
-
-                        <div>
-                            <i class="fa-brands fa-java"></i> <i class="fa-brands fa-python"></i> <i
-                                class="fa-brands fa-react"></i> <i class="fa-brands fa-node"></i> <i
-                                class="fa-solid fa-database"></i>
-                            <h2>Software Developer </h2>
-                            <p>Currently working as a freelancer for one year.And Doing some developent with foreign
-                                developer. </p>
-                            <a href="#">Learn more</a>
-                        </div>
-
-                        <div>
-                            <i class="fa-solid fa-shield"></i>
-                            <h2>Cyber Security Consultan </h2>
-                            <p>Still Learning and working Cyber Security Consultan for DigitzPro.</p>
-                            <a href="#">Learn more</a>
-                        </div>
-
-                        <div>
-                            <i class="fa-solid fa-network-wired"></i>
-                            <h2>Computer System Operator </h2>
-                            <p>Designing Income and Outgoing report with Microsoft office suite</p>
-                            <a href="#">Learn more</a>
-                        </div>
-
-                        <div>
-                            <i class="fa-solid fa-database"></i>
-                            <h2>Database Designer </h2>
-                            <p>I can design database with SQL and no-SQL for youre company fully Customized</p>
-                            <a href="#">Learn more</a>
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
+            <div class="tab-item" id="experience">
+              <ul>
+                <li>
+                  <span>PDF-Sri Lanka (NGO)</span><br />Computer System Operator
+                  (One year +)
+                </li>
+                <li>
+                  <span>DigitzPro</span><br />Website Designer and Developer
+                  (One year +)
+                </li>
+                <li>
+                  <span>Freelancer</span><br />POS Software Developer (One year
+                  +)
+                </li>
+              </ul>
             </div>
 
-
-            <!---------------Portfolio---------------->
-            <div id="portfolio">
-                <div class="container">
-                    <h1 class="sub-servicec">My Work</h1>
-                    <div class="work-list">
-
-                        <div class="work">
-                            <img src="uiuxx design.png">
-                            <div class="layer">
-                                <h3>UI/UX Design</h3>
-                                <p>dogihoer owhiowiehg weothgiwo </p>
-                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="work">
-                            <img src="webdesign.png">
-                            <div class="layer">
-                                <h3>Web Development</h3>
-                                <p>dogihoer owhiowiehg weothgiwo </p>
-                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="work">
-                            <img src="softwaredeveloping.png">
-                            <div class="layer">
-                                <h3>Software Development</h3>
-                                <p>dogihoer owhiowiehg weothgiwo </p>
-                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <a href="#" class="btn"> See more</a>
-                </div>
+            <div class="tab-item" id="education">
+              <ul>
+                <li>
+                  <span>University Of Colombo School Of Computing</span
+                  ><br />Bachelor of Information Technology (BIT)
+                </li>
+                <li>
+                  <span>University Of Moratuwa</span><br />Certificate in
+                  Full-stack Developement
+                </li>
+                <li>
+                  <span>CISCO Network Academy</span><br />Certificate in Cyber
+                  Security Fundamentals
+                </li>
+                <li>
+                  <span>Google</span><br />Certificate in Cyber Security Audit
+                  and SIEM tools
+                </li>
+                <li>
+                  <span>IS2</span><br />Certificate in Cyber Security
+                  Fundamentals
+                </li>
+              </ul>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!---------------Servieces---------------->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-servicec">My services</h1>
 
+        <div class="sevicec-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Development</h2>
+            <p>
+              Harness the power of cutting-edge web technologies with our
+              comprehensive web development services. We specialize in crafting
+              dynamic and user-friendly websites tailored to meet your unique
+              business needs.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
 
-            <!---------------Contact Details---------------->
-            <div id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="contact-social">
-                            <h1 class="contact">Contact me</h1>
-                            <p><a href="http://jmrl.free.nf" target="_blank" ><i class="fa-solid fa-earth-americas"></i>jmrl.free.nf</a>
-                            </p>
-                            <p><i class="fa-regular fa-envelope"></i>ravidu.lak2001@gmail.com</p>
-                            <p><i class="fa-solid fa-phone"></i>+94 77 685 0028</p>
+          <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>UI-UX Design</h2>
+            <p>
+              As a skilled UI/UX designer, I specialize in creating intuitive
+              and engaging user interfaces that elevate digital experiences.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
 
-                            <div class="social-icon">
-                                <a href="https://www.linkedin.com/in/ravidu-lakshanga-7868a719a"><i
-                                        class="fa-brands fa-linkedin"></i></a>
-                                <a href="https://www.facebook.com/rawi.lak?mibextid=ZbWKwL"><i
-                                        class="fa-brands fa-facebook"></i></a>
-                                <a href="https://twitter.com/RaviduLakshanga"><i
-                                        class="fa-brands fa-square-x-twitter"></i></a>
-                                <a href="https://github.com/ravidujmrl"><i class="fa-brands fa-github"></i></a>
-                                <a href="https://wa.me/message/7SACTWYP5D2CK1"><i class="fa-brands fa-whatsapp"></i></a>
-                            </div>
-                            <a href="CV FINAL.png" download class="btn2">Download CV</a>
-                        </div>
-                        <div class="contact-forum">
-                            <form name="submit-to-google-sheet">
-                                <input type="text" name="Name" placeholder="Your Name" required>
-                                <input type="email" name="Email" placeholder="Your Email" required>
-                                <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                                <button type="submit" class="btn btn2">Submit</button>
-                            </form>
-                            <span id="msg"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="copyright">
-                    <p>Copyright @ JMRL PowerdBy DigitzPro Team - 2024</p>
-                </div>
+          <div>
+            <i class="fa-brands fa-java"></i>
+            <i class="fa-brands fa-python"></i>
+            <h2>Software Developmement</h2>
+            <p>
+              Are you looking to turn your ideas into fully functional software
+              solutions? Look no further! As a seasoned software developer, I
+              specialize in crafting robust, scalable, and user-friendly
+              applications tailored to meet your unique needs.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+<!----------------3 servieces are hide-------------->
+      <!--------   <div> 
+            <i class="fa-solid fa-shield"></i>
+            <h2>Cyber Security Consultan</h2>
+            <p>
+              Still Learning and working Cyber Security Consultan for DigitzPro.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
 
+          <div>
+            <i class="fa-solid fa-network-wired"></i>
+            <h2>Computer System Operator</h2>
+            <p>
+              Designing Income and Outgoing report with Microsoft office suite
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-database"></i>
+            <h2>Database Designer</h2>
+            <p>
+              I can design database with SQL and no-SQL for youre company fully
+              Customized
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+        </div> ----> 
+      </div>
+    </div> 
+
+    <!---------------Portfolio---------------->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-servicec">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="uiuxx design.png" />
+            <div class="layer">
+              <h3>UI/UX Design</h3>
+              <p>dogihoer owhiowiehg weothgiwo</p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
+          </div>
 
+          <div class="work">
+            <img src="webdesign.png" />
+            <div class="layer">
+              <h3>Web Development</h3>
+              <p>dogihoer owhiowiehg weothgiwo</p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
 
+          <div class="work">
+            <img src="softwaredeveloping.png" />
+            <div class="layer">
+              <h3>Software Development</h3>
+              <p>dogihoer owhiowiehg weothgiwo</p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn"> See more</a>
+      </div>
+    </div>
 
+    <!---------------Contact Details---------------->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-social">
+            <h1 class="contact">Contact me</h1>
+            <p>
+              <a href="http://jmrl.free.nf" target="_blank"
+                ><i class="fa-solid fa-earth-americas"></i>jmrl.free.nf</a
+              >
+            </p>
+            <p>
+              <i class="fa-regular fa-envelope"></i>ravidu.lak2001@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i>+94 77 685 0028</p>
 
+            <div class="social-icon">
+              <a href="https://www.linkedin.com/in/ravidu-lakshanga-7868a719a"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://www.facebook.com/rawi.lak?mibextid=ZbWKwL"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://twitter.com/RaviduLakshanga"
+                ><i class="fa-brands fa-square-x-twitter"></i
+              ></a>
+              <a href="https://github.com/ravidujmrl"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://wa.me/message/7SACTWYP5D2CK1"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </div>
+            <a href="CV FINAL.png" download class="btn2">Download CV</a>
+          </div>
+          <div class="contact-forum">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright @ JMRL PowerdBy DigitzPro Team - 2024</p>
+      </div>
+    </div>
 
+    <script>
+      var tablinks = document.getElementsByClassName("tab-content");
+      var tabitems = document.getElementsByClassName("tab-item");
 
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("acctive-link");
+        }
 
-            <script>
-                var tablinks = document.getElementsByClassName("tab-content");
-                var tabitems = document.getElementsByClassName("tab-item");
+        for (tabitem of tabitems) {
+          tabitem.classList.remove("active-tab");
+        }
 
+        event.currentTarget.classList.add("acctive-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
 
-                function opentab(tabname) {
-                    for (tablink of tablinks) {
-                        tablink.classList.remove("acctive-link");
-                    }
+    <script>
+      var sidemn = document.getElementById("sidemenu");
 
-                    for (tabitem of tabitems) {
-                        tabitem.classList.remove("active-tab");
-                    }
+      function openmenu() {
+        sidemn.style.right = "0";
+      }
 
-                    event.currentTarget.classList.add("acctive-link")
-                    document.getElementById(tabname).classList.add("active-tab")
-                }
+      function closemenu() {
+        sidemn.style.right = "-200px";
+      }
+    </script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyy2xhKSWKL__ln-vldrEaeuoH6Tm5LFtYDDJEun9lVluPLMFoCDvqoGKRYcA6cNRb0mg/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
 
-
-
-            </script>
-
-            <script>
-                var sidemn = document.getElementById("sidemenu");
-
-                function openmenu() {
-                    sidemn.style.right = "0";
-                }
-
-                function closemenu() {
-                    sidemn.style.right = "-200px";
-                }
-
-
-            </script>
-            <script>
-                const scriptURL = 'https://script.google.com/macros/s/AKfycbyy2xhKSWKL__ln-vldrEaeuoH6Tm5LFtYDDJEun9lVluPLMFoCDvqoGKRYcA6cNRb0mg/exec'
-                const form = document.forms['submit-to-google-sheet']
-                const msg = document.getElementById("msg")
-
-                form.addEventListener('submit', e => {
-                    e.preventDefault()
-                    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                        .then(response => {
-                            msg.innerHTML = "Message sent Succesfully"
-                            setTimeout(function () {
-                                msg.innerHTML = ""
-
-                            }, 1000);
-                            form.reset();
-                        })
-                        .catch(error => console.error('Error!', error.message))
-                })
-            </script>
-
-
-
-
-
-</body>
-
-
-
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent Succesfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 1000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
 </html>
