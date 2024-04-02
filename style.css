@@ -248,7 +248,7 @@ nav ul li a:hover::after {
 
 .sevicec-list div a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 0, 0);
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
@@ -360,6 +360,7 @@ nav ul li a:hover::after {
 .contact-forum{
     flex-basis: 60%;
 }
+
 
 .contact-social p{
     margin-top: 30px;
