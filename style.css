@@ -47,7 +47,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ff0000;
+    color: #ffffff;
     text-shadow: #000000 2px 2px 5px;
     text-decoration: none;
     font-size: 18px;
@@ -58,10 +58,16 @@ nav ul li a ::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
-    position: absolute left 0;
+    background: #ffee00;
+    position: absolute;
+    left: 0;
     bottom: -6px;
     transition: 0.5s;
+    
+}
+
+.nav ul li a :hover{
+    color: red;
 
 }
 
