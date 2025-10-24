@@ -19,6 +19,8 @@ body {
     background-image: url(MyWebImage.png);
     background-size: cover;
     background-position: center;
+    position: relative;
+    
 
 }
 

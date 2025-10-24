@@ -5,9 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ravidu Lakshanga Jayasundara</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/350de2e2b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />    <script src="https://kit.fontawesome.com/350de2e2b1.js" crossorigin="anonymous"></script>
     <link rel="icon" href="Header.png" />
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -269,14 +270,11 @@
                                     class="fa-brands fa-whatsapp"></i></a>
                         </div>
                         <a href="CV FINAL.png" download class="btncv">Download CV</a>
-                    </div>
-
-
-                    <div class="contact-forum">
-                        <form name="submit-to-google-sheet" class="contactform">
-                            <input type="text" name="Name" placeholder="Your Name" required />
-                            <input type="email" name="Email" placeholder="Your Email" required />
-                            <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    </div>                    <div class="contact-forum">
+                        <form id="contact-form" class="contactform">
+                            <input type="text" name="from_name" placeholder="Your Name" required />
+                            <input type="email" name="from_email" placeholder="Your Email" required />
+                            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                             <button type="submit" class="btn btn2">Submit</button>
                         </form>
                         <span id="msg"></span>
@@ -317,25 +315,45 @@
 
             function closemenu() {
                 sidemn.style.right = "-200px";
-            }
-        </script>
+            }        </script>
         <script>
-            const scriptURL =
-                "https://script.google.com/macros/s/AKfycbyy2xhKSWKL__ln-vldrEaeuoH6Tm5LFtYDDJEun9lVluPLMFoCDvqoGKRYcA6cNRb0mg/exec";
-            const form = document.forms["submit-to-google-sheet"];
-            const msg = document.getElementById("msg");
+            // Initialize EmailJS
+            (function() {
+                emailjs.init("94SHFNG1PUenZw9Ln"); // Replace with your EmailJS public key
+            })();
 
-            form.addEventListener("submit", (e) => {
-                e.preventDefault();
-                fetch(scriptURL, { method: "POST", body: new FormData(form) })
-                    .then((response) => {
-                        msg.innerHTML = "Message sent Succesfully";
-                        setTimeout(function () {
-                            msg.innerHTML = "";
-                        }, 1000);
-                        form.reset();
-                    })
-                    .catch((error) => console.error("Error!", error.message));
+            // Handle form submission
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const msg = document.getElementById('msg');
+                const btn = event.target.querySelector('button[type="submit"]');
+                
+                // Disable button and show loading state
+                btn.disabled = true;
+                btn.textContent = 'Sending...';
+                msg.innerHTML = 'Sending message...';
+                msg.style.color = '#61b752';
+                
+                // Send email using EmailJS
+                emailjs.sendForm('94SHFNG1PUenZw9Ln', 't94SHFNG1PUenZw9Ln', this)
+                    .then(function() {
+                        msg.innerHTML = 'Message sent successfully!';
+                        msg.style.color = '#61b752';
+                        document.getElementById('contact-form').reset();
+                        
+                        setTimeout(function() {
+                            msg.innerHTML = '';
+                            btn.disabled = false;
+                            btn.textContent = 'Submit';
+                        }, 3000);
+                    }, function(error) {
+                        msg.innerHTML = 'Failed to send message. Please try again.';
+                        msg.style.color = '#ff0000';
+                        btn.disabled = false;
+                        btn.textContent = 'Submit';
+                        console.error('EmailJS Error:', error);
+                    });
             });
         </script>
 </body>
