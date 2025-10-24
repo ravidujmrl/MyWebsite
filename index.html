@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ravidu Lakshanga Jayasundara</title>
-    <link rel="stylesheet" href="style.css" />    <script src="https://kit.fontawesome.com/350de2e2b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/350de2e2b1.js" crossorigin="anonymous"></script>
     <link rel="icon" href="Header.png" />
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -46,12 +47,19 @@
                 <div class="about-col-2">
                     <h1 class="sub-about">About Me</h1>
                     <p>
-I’m currently pursuing a <b>Bachelor of Information Technology</b> at the <b>University Of Colombo School Of Computing</b> and 
-a Bachelor of Science (Honours) Special Degree in Plantation Management and Technology at Uva Wellassa University of Sri Lanka. 
-This unique combination has strengthened my analytical thinking, technical expertise, and management skills.
-In my academic journey, I’m also expanding my knowledge in Cybersecurity, completing professional courses from Google, (ISC)², and Cisco Networking Academy, and earning multiple digital certificates and badges.
-I have hands-on experience in web development and UI/UX design, with a growing passion for building clean, user-friendly, and efficient digital experiences. 
-I’m familiar with Java, JavaScript, and the MERN Stack. These skills are the technologies that empower me to turn ideas into real, functional projects.
+                        I’m currently pursuing a <b>Bachelor of Information Technology</b> at the <b>University Of
+                            Colombo School Of Computing</b> and
+                        a Bachelor of Science (Honours) Special Degree in Plantation Management and Technology at Uva
+                        Wellassa University of Sri Lanka.
+                        This unique combination has strengthened my analytical thinking, technical expertise, and
+                        management skills.
+                        In my academic journey, I’m also expanding my knowledge in Cybersecurity, completing
+                        professional courses from Google, (ISC)², and Cisco Networking Academy, and earning multiple
+                        digital certificates and badges.
+                        I have hands-on experience in web development and UI/UX design, with a growing passion for
+                        building clean, user-friendly, and efficient digital experiences.
+                        I’m familiar with Java, JavaScript, and the MERN Stack. These skills are the technologies that
+                        empower me to turn ideas into real, functional projects.
                     </p>
 
                     <div class="tab-title">
@@ -271,11 +279,12 @@ I’m familiar with Java, JavaScript, and the MERN Stack. These skills are the t
                                     class="fa-brands fa-whatsapp"></i></a>
                         </div>
                         <a href="CV FINAL.png" download class="btncv">Download CV</a>
-                    </div>                      <div class="contact-forum">
+                    </div>
+                    <div class="contact-forum">
                         <form id="contact-form" class="contactform">
                             <input type="text" name="user_name" placeholder="Your Name" required />
                             <input type="email" name="user_email" placeholder="Your Email" required />
-                            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                            <textarea name="message" rows="2" placeholder="Your Message" required></textarea>
                             <button type="submit" class="btn btn2">Submit</button>
                         </form>
                         <span id="msg"></span>
@@ -317,41 +326,41 @@ I’m familiar with Java, JavaScript, and the MERN Stack. These skills are the t
             function closemenu() {
                 sidemn.style.right = "-200px";
             }        </script>
-        
+
         <!-- EmailJS Contact Form Script -->
         <script>
             // Initialize EmailJS with your Public Key
-            (function() {
+            (function () {
                 emailjs.init("CAe1Y05O_Asl6qz70"); // Replace with your EmailJS Public Key
             })();
 
             // Handle form submission
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
-                
+
                 const msg = document.getElementById('msg');
                 const btn = event.target.querySelector('button[type="submit"]');
-                
+
                 // Disable button and show loading state
                 btn.disabled = true;
-                btn.textContent = 'Sending...'; 
+                btn.textContent = 'Sending...';
                 msg.innerHTML = 'Sending message...';
                 msg.style.color = '#61b752';
-                
+
                 // Send email using EmailJS
                 // Replace YOUR_SERVICE_ID and YOUR_TEMPLATE_ID with your actual IDs
                 emailjs.sendForm('service_ravidujmrl', 'template_raviyajmrl', this)
-                    .then(function() {
+                    .then(function () {
                         msg.innerHTML = 'Message sent successfully! ✓';
                         msg.style.color = '#61b752';
                         document.getElementById('contact-form').reset();
-                        
-                        setTimeout(function() {
+
+                        setTimeout(function () {
                             msg.innerHTML = '';
                             btn.disabled = false;
                             btn.textContent = 'Submit';
                         }, 5000);
-                    }, function(error) {
+                    }, function (error) {
                         msg.innerHTML = 'Failed to send message. Please try again. ✗';
                         msg.style.color = '#ff0000';
                         btn.disabled = false;
@@ -360,7 +369,7 @@ I’m familiar with Java, JavaScript, and the MERN Stack. These skills are the t
                     });
             });
         </script>
-        
+
 </body>
 
 </html>
