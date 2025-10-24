@@ -245,8 +245,8 @@
                     <div class="contact-social">
                         <h1 class="contact">Contact me</h1>
                         <p>
-                            <a href="http://jmrl.free.nf" target="_blank"><i
-                                    class="fa-solid fa-earth-americas"></i>jmrl.free.nf</a>
+                            <a href="http://ravidujmrl.me" target="_blank"><i
+                                    class="fa-solid fa-earth-americas"></i>ravidujmrl</a>
                         </p>
                         <p>
                             <a href="mailto:ravidu.lak2001@gmail.com"><i
@@ -270,10 +270,10 @@
                                     class="fa-brands fa-whatsapp"></i></a>
                         </div>
                         <a href="CV FINAL.png" download class="btncv">Download CV</a>
-                    </div>                    <div class="contact-forum">
+                    </div>                      <div class="contact-forum">
                         <form id="contact-form" class="contactform">
-                            <input type="text" name="from_name" placeholder="Your Name" required />
-                            <input type="email" name="from_email" placeholder="Your Email" required />
+                            <input type="text" name="user_name" placeholder="Your Name" required />
+                            <input type="email" name="user_email" placeholder="Your Email" required />
                             <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                             <button type="submit" class="btn btn2">Submit</button>
                         </form>
@@ -282,7 +282,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>Copyright @ JMRL PowerdBy DigitzPro Team - 2024</p>
+                <p>Copyright @ JMRL PowerdBy DigitzPro Team - 2025</p>
             </div>
         </div>
 
@@ -316,10 +316,12 @@
             function closemenu() {
                 sidemn.style.right = "-200px";
             }        </script>
+        
+        <!-- EmailJS Contact Form Script -->
         <script>
-            // Initialize EmailJS
+            // Initialize EmailJS with your Public Key
             (function() {
-                emailjs.init("94SHFNG1PUenZw9Ln"); // Replace with your EmailJS public key
+                emailjs.init("CAe1Y05O_Asl6qz70"); // Replace with your EmailJS Public Key
             })();
 
             // Handle form submission
@@ -331,14 +333,15 @@
                 
                 // Disable button and show loading state
                 btn.disabled = true;
-                btn.textContent = 'Sending...';
+                btn.textContent = 'Sending...'; 
                 msg.innerHTML = 'Sending message...';
                 msg.style.color = '#61b752';
                 
                 // Send email using EmailJS
-                emailjs.sendForm('94SHFNG1PUenZw9Ln', 't94SHFNG1PUenZw9Ln', this)
+                // Replace YOUR_SERVICE_ID and YOUR_TEMPLATE_ID with your actual IDs
+                emailjs.sendForm('service_ravidujmrl', 'template_raviyajmrl', this)
                     .then(function() {
-                        msg.innerHTML = 'Message sent successfully!';
+                        msg.innerHTML = 'Message sent successfully! ✓';
                         msg.style.color = '#61b752';
                         document.getElementById('contact-form').reset();
                         
@@ -346,9 +349,9 @@
                             msg.innerHTML = '';
                             btn.disabled = false;
                             btn.textContent = 'Submit';
-                        }, 3000);
+                        }, 5000);
                     }, function(error) {
-                        msg.innerHTML = 'Failed to send message. Please try again.';
+                        msg.innerHTML = 'Failed to send message. Please try again. ✗';
                         msg.style.color = '#ff0000';
                         btn.disabled = false;
                         btn.textContent = 'Submit';
@@ -356,6 +359,7 @@
                     });
             });
         </script>
+        
 </body>
 
 </html>
